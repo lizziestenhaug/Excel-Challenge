@@ -1,52 +1,21 @@
- Kickstart My Chart
+ Kickstarter Campaigns
 
-## Background
-
-Over $2 billion has been raised using the massively successful crowdfunding service, Kickstarter, but not every project has found success. Of the more than 300,000 projects launched on Kickstarter, only a third have made it through the funding process with a positive outcome.
-
-Getting funded on Kickstarter requires meeting or exceeding the project's initial goal, so many organizations spend months looking through past projects in an attempt to discover some trick for finding success. For this week's homework, you will organize and analyze a database of 4,000 past projects in order to uncover any hidden trends.
-
-
-Using the Excel table provided, modify and analyze the data of 4,000 past Kickstarter projects as you attempt to uncover some market trends.
-
-* Use conditional formatting to fill each cell in the `state` column with a different color, depending on whether the associated campaign was successful, failed, or canceled, or is currently live.
-
-  * Create a new column O called `Percent Funded` that uses a formula to uncover how much money a campaign made to reach its initial goal.
-
-* Use conditional formatting to fill each cell in the `Percent Funded` column using a three-color scale. The scale should start at 0 and be a dark shade of red, transitioning to green at 100, and blue at 200.
-
-  * Create a new column P called `Average Donation` that uses a formula to uncover how much each backer for the project paid on average.
-
-  * Create two new columns, one called `Category` at Q and another called `Sub-Category` at R, which use formulas to split the `Category and Sub-Category` column into two parts.
-
-  ![Category Stats](Images/CategoryStats.PNG)
-
-  * Create a new sheet with a pivot table that will analyze your initial worksheet to count how many campaigns were successful, failed, canceled, or are currently live per **category**.
-
-  * Create a stacked column pivot chart that can be filtered by country based on the table you have created.
-
-  ![Subcategory Stats](Images/SubcategoryStats.PNG)
-
-  * Create a new sheet with a pivot table that will analyze your initial sheet to count how many campaigns were successful, failed, or canceled, or are currently live per **sub-category**.
-
-  * Create a stacked column pivot chart that can be filtered by country and parent-category based on the table you have created.
-
-* The dates stored within the `deadline` and `launched_at` columns use Unix timestamps. Fortunately for us, [there is a formula](https://www.extendoffice.com/documents/excel/2473-excel-timestamp-to-date.html) that can be used to convert these timestamps to a normal date.
-
-  * Create a new column named `Date Created Conversion` that will use [this formula](https://www.extendoffice.com/documents/excel/2473-excel-timestamp-to-date.html) to convert the data contained within `launched_at` into Excel's date format.
-
-  * Create a new column named `Date Ended Conversion` that will use [this formula](https://www.extendoffice.com/documents/excel/2473-excel-timestamp-to-date.html) to convert the data contained within `deadline` into Excel's date format.
+Conclusions
+About 53% of Kickstarter campaigns are deemed successful
+Theatre had the highest number of successful campaigns while journalism had 0 successful campaigns
+The United States was responsible for over 70% of the data collected
 
 
-  * Create a new sheet with a pivot table with a column of `state`, rows of `Date Created Conversion`, values based on the count of `state`, and filters based on `parent category` and `Years`.
+Limitations of Dataset
+We don’t know if there are any outliers in the average donation. For example did one individual pledge $5,000  and 181 individuals pledge $35.
+Some timelines are longer than others. For example there are campaigns that only lasted a week vs campaigns that lasted two months.
+We don’t know the difference between canceled campaign vs failed campaign
+The data set we have per year is off. In 2009 we only have 14 campaigns to go off of (excluding live) while we have 1225 campaigns in 2015.
 
-  * Now create a pivot chart line graph that visualizes this new table.
-
-* Create a report in Microsoft Word and answer the following questions.
-
-1. Given the provided data, what are three conclusions we can draw about Kickstarter campaigns?
-2. What are some limitations of this dataset?
-3. What are some other possible tables and/or graphs that we could create?
+Possible Tables/Graphs
+A graph that shows average $ pledged per category 
+A table that compares number of backers to average donation to see if donation amounts are similar if you have for example 100 total backers.  
+A table that shows succession, cancelled, and failed rate based on the campaign goal. Do most campaigns fail that have goals of $50,000 and higher?
 
 
 
